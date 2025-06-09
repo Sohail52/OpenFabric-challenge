@@ -1,0 +1,25 @@
+# Python environments
+env/
+env_new/
+venv/
+
+# Model and cache directories
+model_cache/
+offload_folder/
+.cache/
+~/.cache/
+downloads/
+checkpoints/
+
+# Model files
+*.pt
+*.ckpt
+*.bin
+*.h5
+*.onnx
+
+# Others
+__pycache__/
+*.log
+.DS_Store
+Thumbs.db

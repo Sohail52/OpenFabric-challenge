@@ -1,0 +1,41 @@
+# Core dependencies
+torch==2.1.0
+transformers==4.36.2
+huggingface-hub==0.19.4
+streamlit==1.28.0
+Pillow>=10.0.0
+requests>=2.31.0
+
+# Visualization
+plotly==5.18.0
+numpy-stl==3.0.1
+
+# Memory and search
+faiss-cpu==1.7.4
+sentence-transformers==2.2.2
+python-dateutil==2.8.2
+
+# Openfabric
+openfabric-pysdk==0.2.9
+
+# Utility packages
+numpy==1.24.0
+pandas==2.1.0
+tqdm==4.66.0
+python-dotenv>=1.0.0
+
+# Development dependencies
+pytest==7.4.0
+black==23.9.0
+flake8==6.1.0
+
+# Additional dependencies
+gradio==3.50.2
+gevent==22.10.2
+safetensors==0.4.2
+accelerate==0.25.0
+bitsandbytes==0.41.1
+diffusers==0.21.4
+
+# 3D Model Generation
+trimesh==4.0.5 
