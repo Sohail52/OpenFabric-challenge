@@ -22,38 +22,43 @@ Transform text prompts into stunning 3D models through an intelligent AI-powered
 
 ### Prerequisites
 
-* Python 3.8+
-* NVIDIA GPU (recommended)
-* Docker (optional)
+- Python 3.8+  
+- NVIDIA GPU (recommended)  
+- Docker (optional)
 
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/ai-creative-pipeline.git
-cd ai-creative-pipeline
+git clone https://github.com/Sohail52/OpenFabric-challenge.git
+cd OpenFabric-challenge
 pip install -r requirements.txt
 ```
 
-### Running Locally
+### Run Locally
 
 ```bash
 python main.py
 ```
 
-Access the API at: [http://localhost:8888/swagger-ui](http://localhost:8888/swagger-ui)
+Access the API docs at:  
+👉 [http://localhost:8888/swagger-ui](http://localhost:8888/swagger-ui)
 
-### Docker Deployment
+---
+
+## 🐳 Docker Deployment
 
 ```bash
 docker build -t ai-pipeline .
 docker run -p 8888:8888 ai-pipeline
 ```
 
+---
+
 ## 📡 API Endpoints
 
-### POST /execution
+### POST `/execution`
 
-Generate 3D models from text prompts
+Generate 3D models from a simple text prompt.
 
 **Request:**
 
@@ -63,7 +68,7 @@ Generate 3D models from text prompts
 }
 ```
 
-**Successful Response:**
+**Response:**
 
 ```json
 {
@@ -77,11 +82,15 @@ Generate 3D models from text prompts
 }
 ```
 
+---
+
 ## 🧠 Memory System
 
-The pipeline remembers all your creations:
+Stores all generated assets and metadata for future search and recall.
 
-### GET /memory/search?query=cyberpunk
+### GET `/memory/search?query=cyberpunk`
+
+**Response:**
 
 ```json
 {
@@ -98,25 +107,32 @@ The pipeline remembers all your creations:
 }
 ```
 
-## 🏗 Project Structure
+---
+
+## 🗂 Project Structure
 
 ```
 ai-creative-pipeline/
-├── main.py                # FastAPI application entrypoint
+├── main.py                # FastAPI entrypoint
 ├── pipeline.py            # Core generation logic
-├── memory/                # Persistent storage system
-│   ├── vector_db.py       # FAISS similarity search
-│   └── sqlite_db.py       # Asset metadata storage
-├── generated_assets/      # All created images and 3D models
-├── Dockerfile             # Container configuration
-└── requirements.txt       # Python dependencies
+├── memory/
+│   ├── vector_db.py       # FAISS vector similarity
+│   └── sqlite_db.py       # Metadata storage
+├── generated_assets/      # Output images & models
+├── config/
+│   ├── llm_config.yaml    # LLM settings
+│   └── app_config.yaml    # Openfabric app IDs
+├── Dockerfile             # Docker build config
+└── requirements.txt       # Dependencies
 ```
 
-## 🛠 Customization
+---
 
-### Configuring LLM
+## ⚙️ Customization
 
-Edit `config/llm_config.yaml` to change models:
+### 🔧 Change LLM Config
+
+Edit `config/llm_config.yaml`:
 
 ```yaml
 llm:
@@ -125,9 +141,9 @@ llm:
   max_length: 200
 ```
 
-### Changing Openfabric Apps
+### 🧩 Update OpenFabric Apps
 
-Modify `config/app_config.yaml`:
+Edit `config/app_config.yaml`:
 
 ```yaml
 openfabric:
@@ -137,12 +153,19 @@ openfabric:
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add some amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+1. Fork the repo  
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/awesome-feature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add awesome feature"
+   ```
+4. Push and open a pull request
+
+---
 
 ## 📜 License
 
-MIT License - see `LICENSE` file for details.
+MIT License — see [LICENSE](LICENSE) for details.
