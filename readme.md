@@ -2,8 +2,6 @@
 
 Transform text prompts into stunning 3D models through an intelligent AI-powered pipeline.
 
-![Pipeline Flow](https://i.imgur.com/JQhG3xS.png)
-
 ## 🌟 Features
 
 * **Local LLM Processing**: Uses DeepSeek/LLaMA for creative prompt expansion
